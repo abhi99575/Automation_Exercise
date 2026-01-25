@@ -1,0 +1,25 @@
+{
+    "login": {
+        "title": "Automation Exercise",
+        "email": "chikkondraabhi@gmail.com",
+        "password": "A1315.com",
+        "loginAssertion": " Logged in as "
+    },
+    "signup": {
+        "name": "rahul",
+        "email": "rahl994@gmail.com",
+        "password": "A1315.com",
+        "fname": "rahu",
+        "lname": "kl",
+        "address": "38-210/3,CNR",
+        "country": "Canada",
+        "state": "arabia",
+        "city": "hyd",
+        "zipcode": "322245",
+        "mobilenumber": "1232342353"
+    },
+    "products": {
+        "selectedproduct": "Summer White Top"
+    }
+
+}
