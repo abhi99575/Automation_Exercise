@@ -12,3 +12,13 @@ test('file upload',async({page})=>{
     await page.setInputFiles("#file-upload","utils/QA Automation Engineer, India 2025 .pdf");
     await page.locator('#file-submit').click();
 })
+test('file upload 2',async({page})=>{
+    await page.goto('https://the-internet.herokuapp.com/upload');
+    await page.setInputFiles("#file-upload","utils/QA Automation Engineer, India 2025 .pdf");
+    await page.locator('#file-submit').click();
+})
+test('file upload 3',async({page})=>{
+    await page.goto('https://the-internet.herokuapp.com/upload');
+    await page.setInputFiles("#file-upload","utils/QA Automation Engineer, India 2025 .pdf");
+    await page.locator('#file-submit').click();
+})
