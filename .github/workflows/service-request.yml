@@ -1,0 +1,25 @@
+name: Playwright – Service Request Tests
+
+on:
+  workflow_dispatch:
+
+jobs:
+  service-request:
+    runs-on: ubuntu-latest
+    env:
+      CI: true
+      TEST_SUITE: service-request
+
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 18
+
+      - run: npm ci
+
+      - run: npx playwright install --with-deps
+
+      - name: Run Service Request Tests
+        run: ./scripts/entrypoint.sh
