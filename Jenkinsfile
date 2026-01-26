@@ -30,9 +30,16 @@ pipeline {
         }
     }
 
-  post {
+post {
     always {
-        archiveArtifacts artifacts: 'playwright-report/**', fingerprint: true
+        allure([
+            includeProperties: false,
+            jdk: '',
+            properties: [],
+            reportBuildPolicy: 'ALWAYS',
+            results: [[path: 'allure-results']]
+        ])
     }
 }
+
 }
