@@ -11,5 +11,4 @@ test('file upload',async({page})=>{
     await page.goto('https://the-internet.herokuapp.com/upload');
     await page.setInputFiles("#file-upload","C:/Users/MAHESH NARI/Downloads/QA Automation Engineer, India 2025 .pdf");
     await page.locator('#file-submit').click();
-    await page.pause();
 })

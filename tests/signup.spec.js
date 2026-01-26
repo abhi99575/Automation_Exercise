@@ -7,6 +7,4 @@ test('Signup To Automationexercise ',async({page})=>{
     await Signup.goto();
     await Signup.signUp(Objecttestdata.signupData);
     await expect(page.getByText('ACCOUNT CREATED!')).toBeVisible();
-    await page.pause();
-
 })
