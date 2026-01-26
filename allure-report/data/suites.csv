@@ -1,0 +1,6 @@
+"DESCRIPTION","DURATION IN MS","NAME","PARENT SUITE","START TIME","STATUS","STOP TIME","SUB SUITE","SUITE","TEST CLASS","TEST METHOD"
+"","35814","E2E test add to cart","chromium","2026-01-26","broken","2026-01-26","","e2e_ecommerce.spec.js","",""
+"","27772","iFrame verification","chromium","2026-01-26","passed","2026-01-26","","iframae.spec.js","",""
+"","23005","Login To Automationexercise","chromium","2026-01-26","passed","2026-01-26","","login.spec.js","",""
+"","18937","file upload","chromium","2026-01-26","passed","2026-01-26","","iframae.spec.js","",""
+"","22959","Signup To Automationexercise","chromium","2026-01-26","passed","2026-01-26","","signup.spec.js","",""

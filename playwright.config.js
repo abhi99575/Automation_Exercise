@@ -18,10 +18,9 @@ export default defineConfig({
 
   workers: process.env.CI ? 3 : undefined,
 
-  reporter: process.env.CI
-    ? [['html', { open: 'never' }]]
-    : [['html', { open: 'on-failure' }]],
-
+  reporter: [
+    ['allure-playwright']
+  ],
   use: {
     headless: !!process.env.CI,
 
@@ -37,4 +36,3 @@ export default defineConfig({
     },
   ],
 });
-//git
