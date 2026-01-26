@@ -7,7 +7,7 @@ const Textframe=page.frame({url:'https://demoqa.com/sample'});
 const text=await Textframe.locator("#sampleHeading").textContent();
 console.log(text);
 })
-test.only('file upload',async({page})=>{
+test('file upload',async({page})=>{
     await page.goto('https://the-internet.herokuapp.com/upload');
     await page.setInputFiles("#file-upload","C:/Users/MAHESH NARI/Downloads/Abhilash_QA_Automation_Playwright_Resume.pdf");
     await page.locator('#file-submit').click();
