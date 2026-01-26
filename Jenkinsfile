@@ -32,14 +32,18 @@ pipeline {
 
     post {
         always {
-            publishHTML([
-                allowMissing: false,
-                alwaysLinkToLastBuild: true,
-                keepAll: true,
-                reportDir: 'playwright-report',
-                reportFiles: 'index.html',
-                reportName: 'Playwright Test Report'
-            ])
+            script {
+                if (fileExists('playwright-report/index.html')) {
+                    publishHTML([
+                        reportDir: 'playwright-report',
+                        reportFiles: 'index.html',
+                        reportName: 'Playwright Test Report',
+                        keepAll: true
+                    ])
+                } else {
+                    echo 'Playwright report not found'
+                }
+            }
         }
     }
 }
