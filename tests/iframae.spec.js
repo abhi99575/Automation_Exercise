@@ -9,6 +9,6 @@ console.log(text);
 })
 test('file upload',async({page})=>{
     await page.goto('https://the-internet.herokuapp.com/upload');
-    await page.setInputFiles("#file-upload","C:/Users/MAHESH NARI/Downloads/QA Automation Engineer, India 2025 .pdf");
+    await page.setInputFiles("#file-upload","C:\Users\MAHESH NARI\Downloads\Abhilash_QA_Automation_Playwright_Resume.pdf");
     await page.locator('#file-submit').click();
 })
