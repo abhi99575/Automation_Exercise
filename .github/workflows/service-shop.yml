@@ -1,11 +1,45 @@
+# name: Playwright – Service Shop Tests
+
+# on:
+#   workflow_dispatch:
+
+# jobs:
+#   service-shop:
+#     runs-on: ubuntu-latest
+#     env:
+#       CI: true
+#       TEST_SUITE: service-shop
+
+#     steps:
+#       - uses: actions/checkout@v4
+
+#       - uses: actions/setup-node@v4
+#         with:
+#           node-version: 18
+
+#       - run: npm ci
+
+#       - run: npx playwright install --with-deps
+
+#       - name: Run Service Shop Tests
+#         run: ./scripts/entrypoint.sh
+
 name: Playwright – Service Shop Tests
 
 on:
+  push:
+    branches:
+      - main
+      - develop
+  pull_request:
+    branches:
+      - main
   workflow_dispatch:
 
 jobs:
   service-shop:
     runs-on: ubuntu-latest
+
     env:
       CI: true
       TEST_SUITE: service-shop
